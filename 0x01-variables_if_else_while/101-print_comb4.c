@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <time.h>
 /**
  * main - Entry poinnt
@@ -10,7 +11,7 @@ int main(void)
 	for (d = '0'; d < '9'; d++)
 	{
 
-	for (p = d + 1; p <= 'q'; p++)
+	for (p = d + 1; p <= '9'; p++)
 	{
 
 	for (q = p + 1; q <= '9'; q++)
@@ -20,7 +21,7 @@ int main(void)
 	putchar(d);
 	putchar(p);
 	putchar(q);
-	if (d == '7' && p == '8')
+	if (d == 7 && p == 8)
 		continue;
 	putchar(',');
 	putchar(' ');
