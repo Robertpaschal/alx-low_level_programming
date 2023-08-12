@@ -8,7 +8,7 @@ int main(void)
 {
 	int d, p, q;
 
-	for (d = '0'; d < '8'; d++)
+	for (d = '0'; d < '7'; d++)
 	{
 
 	for (p = d + 1; p <= '8'; p++)
@@ -18,9 +18,9 @@ int main(void)
 	{
 	if ((p != d) != q)
 	{
-	putchar(d);
-	putchar(p);
-	putchar(q);
+	putchar(d + '0');
+	putchar(p + '0');
+	putchar(q + '0');
 	if (d == 7 && p == 8 && q == 9)
 		continue;
 	putchar(',');
