@@ -6,20 +6,22 @@
 
 int main(void)
 {
-	long long n = 612852475143;
-	long long l = 2;
+	long n = 612852475143;
+	long l = 2;
 
 	while (n > 1)
 	{
 		if (n % l == 0)
+		{
 			n /= l;
-	}
-	else
-	{
-		l++
+		}
+		else
+		{
+		l++;
+		}
 	}
 
-	printf("%lld\n", l);
+	printf("%ld\n", l);
 
 	return (0);
 
