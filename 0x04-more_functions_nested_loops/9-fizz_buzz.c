@@ -28,12 +28,12 @@ int main(void)
 		}
 	}
 
-	printf("\n");
-
 	if (i < 100)
 	{
 		printf(" ");
 	}
+
+	printf("\n");
 
 	return (0);
 }
