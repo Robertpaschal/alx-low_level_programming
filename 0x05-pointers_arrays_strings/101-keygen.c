@@ -1,37 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
+#define PASSWORD_LENGTH 12
+
 /**
- * getRandom - gets a random char
- * generateRandomPassword - generates a random password
- * @charset: a set of characters
- * @charseLength: size of the charset
- * return: Always 0
+ * main - generates random password
+ * Return: Always 0
  */
 
-char getRandomChar(const char *charset, int charsetLength)
+int main()
 {
-	int randomIndex = rand() % charsetLength;
-	return (charset[randomIndex]);
-}
+	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	int charsetSize = sizeof(charset) - 1;
 
-void generateRandomPassword(int lenght)
-{
-	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0213456789";
-	const int charsetLenght = sizeof(charset) - 1;
+	srand(time(NULL));
 
-	if (length <= 0)
+	char password[PASSWORD_LENGTH + 1];
+	for (int i = 0; i < PASSWORD_LENGTH; i++)
 	{
-		printf("Invalid password length.\n");
-		return;
+		int index = rand() % charsetSize;
+		password[i] = charset[index];
 	}
+	password[PASSWORD_LENGTH] = '\0';
 
-	for (int i = 0; i < length; i++)
-	{
-		char randomChar = getRandomChar(charset, charsetLength);
+	printf("Generated Password: %s\n", password);
 
-		printf("%c", randomChar);
-	}
-
-	printf("\n");
+	return (0);
 }
