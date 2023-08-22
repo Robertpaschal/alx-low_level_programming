@@ -15,9 +15,12 @@ void puts2(char *str)
 		return;
 	}
 
-	for (i = 0; str[i] != '\0'; i += 2)
+	for (i = 0; str[i] != '\0'; i++)
 	{
+		if (str[i] % 2 == 0)
+		{
 		printf("%c", str[i]);
+		}
 	}
 	printf("\n");
 }
