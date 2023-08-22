@@ -8,23 +8,15 @@
  */
 void puts2(char *str)
 {
-	int i = 0;
-	int longi = 0;
-	char *y = str;
-	int o;
+	int i;
 
-	while (*y != '\0')
+	if (str == NULL)
 	{
-		y++;
-		longi++
+		return;
 	}
-	t = longi - 1;
-	for (o = 0; o <= t; o++)
+
+	for (i = 0; str[i] != '\0'; i += 2)
 	{
-		if (o % 2 == 0)
-		{
-			_putchar(str[o]);
-		}
+		printf("%c\n", str[i]);
 	}
-	_putchar('\n');
 }
