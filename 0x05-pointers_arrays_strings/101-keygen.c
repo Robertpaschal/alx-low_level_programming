@@ -11,13 +11,13 @@
 
 int main()
 {
+	char password[PASSWORD_LENGTH + 1];
+	int i;
+
 	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	int charsetSize = sizeof(charset) - 1;
 
 	srand(time(NULL));
-
-	char password[PASSWORD_LENGTH + 1];
-	int i;
 
 	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
