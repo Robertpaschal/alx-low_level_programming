@@ -24,7 +24,7 @@ void print_buffer(char *b, int size)
 		o = size - j < 10 ? size - j : 10;
 		printf("%08x: ", j);
 		for (i = 0; i < 10; i++)
-		{
+		
 			if (i < o)
 				printf("%02x", *(b + j+ i));
 			else
@@ -33,7 +33,7 @@ void print_buffer(char *b, int size)
 			{
 				printf(" ");
 			}
-		}
+		
 		for (i = 0; i < o; i++)
 		{
 			int c = *(b + j + i);
