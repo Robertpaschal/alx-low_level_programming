@@ -1,25 +1,27 @@
 #include "main.h"
+#include <string.h>
 /**
  * leet - encode a string
  * @n: input value
- * Return: value n
+ * Return: n value
  */
 
 char *leet(char *n)
 {
-	int a, b;
+	int i, j;
 	char s1[] = "aAeEoOtTIL";
 	char s2[] = "4433007711";
 
-	for (a = 0; n[a] != '\0'; a++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (b = 0; b < 10; b++)
+		for (j = 0; j < 10; j++)
 		{
-			if (n[a] == s1[b])
+			if (n[i] == s1[j])
 			{
-				n[a] = s2[b];
+				n[i] = s2[j];
 			}
 		}
 	}
 	return (n);
+
 }
