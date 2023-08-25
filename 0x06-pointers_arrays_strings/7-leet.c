@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
 /**
  * leet - encode a string
@@ -19,9 +20,11 @@ char *leet(char *n)
 			if (n[i] == s1[j])
 			{
 				n[i] = s2[j];
+				break;
 			}
 		}
 	}
+	putchar('\n');
 	return (n);
 
 }
