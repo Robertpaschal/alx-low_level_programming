@@ -18,11 +18,10 @@ void print_buffer(char *b, int size)
 		printf("\n");
 		return;
 	}
-
 	while (o < size)
 	{
 		j = size - o < 10 ? size - o : 10;
-		printf("%08x: ", o);
+		printf("%08x:  ", o);
 		for (i = 0; i < 10; i++)
 		{
 			if (i < j)
