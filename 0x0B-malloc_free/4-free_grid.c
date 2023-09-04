@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * free_grind - frees a 2 dimensional grid
- * @*grid: grid of array
+ * free_grid - frees a 2 dimensional grid
+ * @grid: grid of array
  * @height: height
  * Return: Nothing
  */
