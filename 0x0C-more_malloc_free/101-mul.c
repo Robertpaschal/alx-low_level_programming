@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#define ERR_MSG "Error"
 /**
  * is_digit - helper function
  * @c: character
