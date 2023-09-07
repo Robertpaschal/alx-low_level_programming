@@ -3,69 +3,66 @@
 #include <stdlib.h>
 #define ERR_MSG "Error"
 /**
- * is_digit - helper function
- * @c: character
- * Return: nothing
+ * multiply - multpilies 2 numbers
+ * @num1: first number
+ * @num2: second number
+ * Return: result
  */
-int is_digit(char c)
+int multiply(char *num1, char *num2)
 {
-	return ((c >= '0' && c <= '9'));
+	int result;
+
+	result = atoi(num1) * atoi(num2);
+	return (result);
 }
 /**
- * str_to_int - helper function
- * @str: string
- * Return: nothing
+ * is_valid_number - checks valid number
+ * @num: number
+ * Return: 1 (success)
  */
-int str_to_int(char *str)
+int is_valid_number(char *num)
 {
-	int result = 0;
-
-	while (*str)
+	while (*num)
 	{
-		if (!is_digit(*str))
+		if (*num < '0' || *num > '9')
 		{
-			_putchar('E');
-			_putchar('r');
-			_putchar('r');
-			_putchar('o');
-			_putchar('r');
-			_putchar('\n');
-			exit(98);
+			return (0);
 		}
-
-		result = result * 10 + (*str - '0');
-		str++;
+		num++;
 	}
 
-	return (result);
+	return (1);
+}
+/**
+ * errors - handles errors for main
+ */
+void errors(void)
+{
+	printf("Error\n");
+	exit(98);
 }
 /**
  * main - function
  * @argc: argument counter
  * @argv: argument vector
- * Return: 98 (fail) otherwise, 0 (success)
+ * Return: Always 0 (success)
  */
 int main(int argc, char *argv[])
 {
-	int num1;
-	int num2;
+	int result;
 
 	if (argc != 3)
 	{
-		_putchar('E');
-		_putchar('r');
-		_putchar('r');
-		_putchar('o');
-		_putchar('r');
-		_putchar('\n');
-
-		return (98);
+		errors();
 	}
 
-	num1 = str_to_int(argv[1]);
-	num2 = str_to_int(argv[2]);
+	if (!is_valid_number(argv[1]) || !is_valid_number(argv[2]))
+	{
+		errors();
+	}
 
-	_putchar(num1 * num2);
+	result = multiply(argv[1], argv[2]);
+	_putchar(result);
 
 	return (0);
 }
