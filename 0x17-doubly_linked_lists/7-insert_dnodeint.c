@@ -4,7 +4,7 @@
  * @h: node at the given index
  * @idx: index where the node is located
  * @n: the data to be added
- * Return; address of the new node or NULL if it failed
+ * Return: address of the new node or NULL if it failed
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
