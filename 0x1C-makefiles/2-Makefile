@@ -6,14 +6,7 @@ NAME: school
 
 #Rule: all
 all: $(OBJ)
-
-#Target: $(NAME)
-$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-#Rule: recompile only the updated source files
-$(OBJ): %.o: %.c
-	$(CC) -c $< -o $@
 #Clean rule to remove the executable and oblect files
 clean:
 	rm -f $(NAME) $(OBJ)
