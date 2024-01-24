@@ -10,15 +10,8 @@ HEADER = m.h
 .PHONY: all clean oclean fclean re
 
 # Rule: all
-all: $(NAME)
-
-# Target: $(NAME) (executable)
-$(NAME): $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-# Rule: recompile only the updated source files
-$(OBJ): $(SRC) $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule: clean
 clean:
