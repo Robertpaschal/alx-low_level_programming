@@ -7,7 +7,7 @@ def island_perimeter(grid):
     Parameters:
     - grid (list of list of intergers): Grid representing the island.
 
-    Returns: 
+    Returns:
     - int: Perimeter of the island
     """
 
@@ -23,7 +23,7 @@ def island_perimeter(grid):
                 perimeter += 4
                 if i > 0 and grid[i - 1][j] == 1:
                     perimeter -= 2
-                if j > 0 and grid[i][j -1] == 1:
+                if j > 0 and grid[i][j - 1] == 1:
                     perimeter -= 2
 
     return perimeter
