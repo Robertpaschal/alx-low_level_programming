@@ -19,7 +19,8 @@ $(OBJ): %.o: %.c
 	$(CC) -c $< -o $@
 
 # Rule: clean
-clean: $(RM) *~ *
+clean:
+	$(RM) *~ *# $(NAME)
 
 # Rule: oclean (delet object files)
 oclean:
