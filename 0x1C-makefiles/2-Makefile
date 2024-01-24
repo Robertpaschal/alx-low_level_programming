@@ -1,0 +1,19 @@
+#Variables
+CC: gcc
+SRC: main.c school.c
+OBJ: $(SRC:.c=.o)
+NAME: school
+
+#Rule: all
+all: $(NAME)
+
+#Target: $(NAME)
+$(NAME): $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
+
+#Rule: recompile only the updated source files
+$(OBJ): %.o: %.c
+	$(CC) -c $< -o $@
+#Clean rule to remove the executable and oblect files
+clean:
+	rm -f $(NAME) $(OBJ)
