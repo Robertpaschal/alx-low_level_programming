@@ -1,0 +1,1 @@
+In this directory, I am learning how to write C codes for different search algorithmns
